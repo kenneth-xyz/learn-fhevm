@@ -50,36 +50,6 @@ npx hardhat compile
 npx hardhat test
 ```
 
-#### Deploy Contracts
-
-Edit the deployment script in `deploy/deploy.ts` as needed, then run:
-
-```bash
-npx hardhat run deploy/deploy.ts --network <network-name>
-```
-
-#### Run Custom Tasks
-
-List available tasks:
-
-```bash
-npx hardhat help
-```
-
-Run a specific task (e.g., accounts):
-
-```bash
-npx hardhat accounts
-```
-
-## Documentation
-
-- [FHEVM Documentation](https://docs.zama.ai/fhevm)
-- [FHEVM Hardhat Quick Start Tutorial](https://docs.zama.ai/protocol/solidity-guides/getting-started/quick-start-tutorial)
-- [Setup Guide](https://docs.zama.ai/protocol/solidity-guides/getting-started/setup)
-- [Writing and Running Tests](https://docs.zama.ai/protocol/solidity-guides/development-guide/hardhat/write_test)
-- [FHEVM Hardhat Plugin](https://docs.zama.ai/protocol/solidity-guides/development-guide/hardhat)
-
 ## Testing and Interacting on Sepolia Testnet
 
 You can test your FHEVM smart contract using real encrypted values by running your tests and deploying on the Sepolia Testnet.
@@ -130,3 +100,30 @@ npx hardhat --network sepolia task:increment --value 1
 ```bash
 npx hardhat --network sepolia task:decrypt-count
 ```
+
+
+#### Run Custom Tasks
+
+List available tasks:
+
+```bash
+npx hardhat help
+```
+
+Run a specific task (e.g., accounts):
+
+```bash
+npx hardhat accounts
+```
+
+## Documentation
+
+- [FHEVM Documentation](https://docs.zama.ai/fhevm)
+- [FHEVM Hardhat Quick Start Tutorial](https://docs.zama.ai/protocol/solidity-guides/getting-started/quick-start-tutorial)
+- [Setup Guide](https://docs.zama.ai/protocol/solidity-guides/getting-started/setup)
+- [Writing and Running Tests](https://docs.zama.ai/protocol/solidity-guides/development-guide/hardhat/write_test)
+- [FHEVM Hardhat Plugin](https://docs.zama.ai/protocol/solidity-guides/development-guide/hardhat)
+
+## License
+
+This project is licensed under the MIT License.
