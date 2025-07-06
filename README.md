@@ -80,6 +80,53 @@ npx hardhat accounts
 - [Writing and Running Tests](https://docs.zama.ai/protocol/solidity-guides/development-guide/hardhat/write_test)
 - [FHEVM Hardhat Plugin](https://docs.zama.ai/protocol/solidity-guides/development-guide/hardhat)
 
-## License
+## Testing and Interacting on Sepolia Testnet
 
-This project is licensed under the MIT License.
+You can test your FHEVM smart contract using real encrypted values by running your tests and deploying on the Sepolia Testnet.
+
+### 1. Rebuild the Project for Sepolia
+
+From the root project directory:
+
+```bash
+npx hardhat clean
+npx hardhat compile --network sepolia
+```
+
+### 2. Deploy the FHECounter Smart Contract on Sepolia
+
+```bash
+npx hardhat deploy --network sepolia
+```
+
+### 3. Check the Deployed FHECounter Contract FHEVM Configuration
+
+From the root project directory:
+
+```bash
+npx hardhat fhevm check-fhevm-compatibility --network sepolia --address <deployed contract address>
+```
+
+> If an internal exception is raised, it likely means the contract was not properly compiled for the Sepolia network.
+
+### 4. Interact with the Deployed FHECounter Contract
+
+From the root project directory:
+
+#### Decrypt the Current Counter Value
+
+```bash
+npx hardhat --network sepolia task:decrypt-count
+```
+
+#### Increment the Counter by 1
+
+```bash
+npx hardhat --network sepolia task:increment --value 1
+```
+
+#### Decrypt the New Counter Value
+
+```bash
+npx hardhat --network sepolia task:decrypt-count
+```
