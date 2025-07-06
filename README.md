@@ -19,6 +19,8 @@ This project provides a ready-to-use Hardhat template for developing, testing, a
 - [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
 - [Hardhat](https://hardhat.org/)
 
+> **Note:** Hardhat does not support odd-numbered Node.js versions. If you're using one (e.g., v21.x, v23.x), Hardhat will display a persistent warning message and may behave unexpectedly.
+
 ### Installation
 
 1. Clone this repository:
