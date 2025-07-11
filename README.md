@@ -59,7 +59,6 @@ You can test your FHEVM smart contract using real encrypted values by running yo
 From the root project directory:
 
 ```bash
-npx hardhat clean
 npx hardhat compile --network sepolia
 ```
 
@@ -100,7 +99,6 @@ npx hardhat --network sepolia task:increment --value 1
 ```bash
 npx hardhat --network sepolia task:decrypt-count
 ```
-
 
 #### Run Custom Tasks
 
